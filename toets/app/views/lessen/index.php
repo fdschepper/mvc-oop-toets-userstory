@@ -2,16 +2,14 @@
 <h3><?= $data['title'] ?></h3>
 
 <p>Auto van instructeur:
-<h5><?= $data['instructeurNaam'] ?></h5>
+    <?= $data['instructeurNaam'] ?>
 </p>
 <p>E-mailadres:
-<h5><?= $data['EmailAdres'] ?></h5>
+    <?= $data['instructeurEmail'] ?>
 </p>
 <p>Kenteken auto:
-<h5><?= $data['Kenteken'] ?></h5>
+    <?= $data['instructeurAutoKenteken'] ?> <?= $data['instructeurAutoType'] ?>
 </p>
-
-
 
 <table border='1'>
     <thead>

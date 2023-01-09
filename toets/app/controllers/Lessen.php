@@ -25,8 +25,6 @@ class Lessen extends Controller
         foreach ($result as $info) {
             //$d = new DateTimeImmutable($info->DatumTijd, new DateTimeZone('Europe/Amsterdam'));
             $rows .= "<tr>
-                        
-                        
                         <td>$info->LENA</td>
                         <td><a href='" . URLROOT . "/lessen/infolesson/{$info->Id}'><img src='" . URLROOT . "/img/b_help.png' alt='questionmark'></a></td>
                         <td><a href='" . URLROOT . "/lessen/topicslesson/{$info->Id}'><img src='" . URLROOT . "/img/b_props.png' alt='topiclist'></a></td>
