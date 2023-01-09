@@ -94,7 +94,7 @@ class Lessen extends Controller
             'title' => 'Mankement Toevoegen',
             'lesId' => $lesId,
             'kenteken' => $instructeurAutoKenteken,
-            
+            'type' => $instructeurAutoType,
             'topicError' => ''
         ];
 
