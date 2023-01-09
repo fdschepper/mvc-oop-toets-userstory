@@ -10,7 +10,7 @@ class Lessen extends Controller
 
     public function index()
     {
-        $result = $this->lesModel->getLessons();
+        $result = $this->lesModel->getInstructor();
         if ($result) {
             $instructeurNaam = $result[0]->INNA;
             $instructeurAuto = $result[0]->INAU;

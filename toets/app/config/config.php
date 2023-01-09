@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'mvc-2109b');
+define('DB_NAME', 'mvc-oop-toets');
 
 // Het pad naar deze app map
 define('APPROOT', dirname(dirname(__FILE__)));
