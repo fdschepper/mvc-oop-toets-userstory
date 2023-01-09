@@ -15,10 +15,13 @@
     <thead>
         <th>Datum</th>
         <th>mankement</th>
-        <th>mankement</th>
-        <th>mankement</th>
     </thead>
     <tbody>
         <?= $data['rows'] ?>
     </tbody>
 </table>
+
+<a href=""></a>
+<?= "
+<a href='" . URLROOT . "/lessen/infolesson/{$info->Id}'><img src='" . URLROOT . "/img/b_help.png' alt='questionmark'></a>
+" ?>

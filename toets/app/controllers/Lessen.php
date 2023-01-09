@@ -27,9 +27,7 @@ class Lessen extends Controller
             $rows .= "<tr>
                         <td>$info->Datum</td>
                         <td>$info->Mankement</td>
-                        <td><a href='" . URLROOT . "/lessen/infolesson/{$info->Id}'><img src='" . URLROOT . "/img/b_help.png' alt='questionmark'></a></td>
-                        <td><a href='" . URLROOT . "/lessen/topicslesson/{$info->Id}'><img src='" . URLROOT . "/img/b_props.png' alt='topiclist'></a></td>
-                    </tr>";
+                        </tr>";
         }
 
         $data = [
