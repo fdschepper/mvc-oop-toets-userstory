@@ -13,8 +13,10 @@ class Lessen extends Controller
         $result = $this->lesModel->getLessons();
         if ($result) {
             $instructeurNaam = $result[0]->INNA;
+            $instructeurAuto = $result[0]->INAU;
         } else {
             $instructeurNaam = '';
+            $instructeurAuto = '';
         }
         var_dump($result);
         $rows = '';
@@ -32,7 +34,7 @@ class Lessen extends Controller
         $data = [
             'title' => "Overzicht Mankementen",
             'rows' => $rows,
-            'instructeurNaam' => $instructeurNaam
+            'instructeurNaam' => $instructeurNaam,
             'InstructeurAuto' => $instructeurAuto
         ];
         $this->view('lessen/index', $data);

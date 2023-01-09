@@ -29,6 +29,26 @@ class Les
         return $result;
     }
 
+    public function getInstructor()
+    {
+        $this->db->query("SELECT instructeur1.id
+                                ,auto.id as AUID
+                                ,Les.Id
+                                ,Instructeur.Naam AS INNA
+                          FROM Les
+                          INNER JOIN Instructeur
+                          ON Instructeur.Id = Les.InstructeurId
+                          INNER JOIN Leerling
+                          ON Leerling.Id = Les.LeerlingId
+                          WHERE Instructeur.Id = :Id");
+
+        $this->db->bind(':Id', 2);
+
+        $result = $this->db->resultSet();
+
+        return $result;
+    }
+
     public function getTopicsLesson($lessonId)
     {
         $this->db->query("SELECT *
