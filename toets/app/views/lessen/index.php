@@ -15,6 +15,8 @@
     <thead>
         <th>Datum</th>
         <th>mankement</th>
+        <th>mankement</th>
+        <th>mankement</th>
     </thead>
     <tbody>
         <?= $data['rows'] ?>

@@ -31,9 +31,10 @@ class Les
 
     public function getInstructor()
     {
-        $this->db->query("SELECT instructeur1.Naam ,instructeur1.Id AS INID, auto.Id AS AUID, instructeur1.Email, auto.Kenteken, auto.Type
+        $this->db->query("SELECT instructeur1.Naam ,instructeur1.Id AS INID, auto.Id AS AUID, instructeur1.Email, auto.Kenteken, auto.Type, mankement.Datum, mankement.Mankement
         FROM instructeur1
         INNER JOIN auto ON instructeur1.Id = auto.InstructeurId
+        INNER JOIN mankement ON auto.Id = mankement.AutoId
         WHERE instructeur1.Id = :Id
         ");
 
