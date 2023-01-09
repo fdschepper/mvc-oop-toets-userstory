@@ -34,7 +34,7 @@ class Les
         $this->db->query("SELECT instructeur1.Naam ,instructeur1.Id AS INID, auto.Id AS AUID, instructeur1.Email, auto.Kenteken, auto.Type
         FROM instructeur1
         INNER JOIN auto ON instructeur1.Id = auto.InstructeurId
-        WHERE instructeur1.Id = 2
+        WHERE instructeur1.Id = :Id
         ");
 
         $this->db->bind(':Id', 2);

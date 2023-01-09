@@ -12,8 +12,10 @@ class Lessen extends Controller
     {
         $result = $this->lesModel->getInstructor();
         if ($result) {
-            $instructeurNaam = $result[0]->INNA;
-            $instructeurAuto = $result[0]->INAU;
+            $instructeurNaam = $result[0]->Naam;
+            $instructeurEmail = $result[0]->Email;
+            $instructeurAutoKenteken = $result[0]->Kenteken;
+            $instructeurAutoType = $result[0]->Type;
         } else {
             $instructeurNaam = '';
             $instructeurAuto = '';
@@ -21,10 +23,10 @@ class Lessen extends Controller
         var_dump($result);
         $rows = '';
         foreach ($result as $info) {
-            $d = new DateTimeImmutable($info->DatumTijd, new DateTimeZone('Europe/Amsterdam'));
+            //$d = new DateTimeImmutable($info->DatumTijd, new DateTimeZone('Europe/Amsterdam'));
             $rows .= "<tr>
-                        <td>{$d->format('d-m-Y')}</td>
-                        <td>{$d->format('H:i')}</td>
+                        
+                        
                         <td>$info->LENA</td>
                         <td><a href='" . URLROOT . "/lessen/infolesson/{$info->Id}'><img src='" . URLROOT . "/img/b_help.png' alt='questionmark'></a></td>
                         <td><a href='" . URLROOT . "/lessen/topicslesson/{$info->Id}'><img src='" . URLROOT . "/img/b_props.png' alt='topiclist'></a></td>
@@ -35,7 +37,9 @@ class Lessen extends Controller
             'title' => "Overzicht Mankementen",
             'rows' => $rows,
             'instructeurNaam' => $instructeurNaam,
-            'InstructeurAuto' => $instructeurAuto
+            'instructeurEmail' => $instructeurEmail,
+            'instructeurAutoKenteken' => $instructeurAutoKenteken,
+            'instructeurAutoType' => $instructeurAutoType
         ];
         $this->view('lessen/index', $data);
     }
