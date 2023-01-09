@@ -5,7 +5,7 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'mvc-2109b');
 
-// Het pad naar de app map
+// Het pad naar deze app map
 define('APPROOT', dirname(dirname(__FILE__)));
 
 // De URL van deze site
