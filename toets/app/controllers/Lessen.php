@@ -16,6 +16,7 @@ class Lessen extends Controller
             $instructeurEmail = $result[0]->Email;
             $instructeurAutoKenteken = $result[0]->Kenteken;
             $instructeurAutoType = $result[0]->Type;
+            $instructeurId = $result[0]->INID;
         } else {
             $instructeurNaam = '';
             $instructeurAuto = '';
@@ -36,7 +37,9 @@ class Lessen extends Controller
             'instructeurNaam' => $instructeurNaam,
             'instructeurEmail' => $instructeurEmail,
             'instructeurAutoKenteken' => $instructeurAutoKenteken,
-            'instructeurAutoType' => $instructeurAutoType
+            'instructeurAutoType' => $instructeurAutoType,
+
+            'instructeurId' => $instructeurId
         ];
         $this->view('lessen/index', $data);
     }

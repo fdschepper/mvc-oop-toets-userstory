@@ -20,8 +20,4 @@
         <?= $data['rows'] ?>
     </tbody>
 </table>
-
-<a href=""></a>
-<?= "
-<a href='" . URLROOT . "/lessen/infolesson/{$info->Id}'><img src='" . URLROOT . "/img/b_help.png' alt='questionmark'></a>
-" ?>
+<?= $data['button'] ?>
