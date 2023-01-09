@@ -16,7 +16,7 @@ class Lessen extends Controller
         } else {
             $instructeurNaam = '';
         }
-        //var_dump($result);
+        var_dump($result);
         $rows = '';
         foreach ($result as $info) {
             $d = new DateTimeImmutable($info->DatumTijd, new DateTimeZone('Europe/Amsterdam'));
@@ -30,9 +30,10 @@ class Lessen extends Controller
         }
 
         $data = [
-            'title' => "Overzicht Lessen",
+            'title' => "Overzicht Mankementen",
             'rows' => $rows,
             'instructeurNaam' => $instructeurNaam
+            'InstructeurAuto' => $instructeurAuto
         ];
         $this->view('lessen/index', $data);
     }

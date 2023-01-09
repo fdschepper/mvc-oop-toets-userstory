@@ -4,15 +4,19 @@
 <p>Auto van instructeur:
 <h5><?= $data['instructeurNaam'] ?></h5>
 </p>
+<p>E-mailadres:
+<h5><?= $data['EmailAdres'] ?></h5>
+</p>
+<p>Kenteken auto:
+<h5><?= $data['Kenteken'] ?></h5>
+</p>
+
 
 
 <table border='1'>
     <thead>
         <th>Datum</th>
-        <th>Tijd</th>
-        <th>Naam Leerling</th>
-        <th>Lesinfo</th>
-        <th>Onderwerp</th>
+        <th>mankement</th>
     </thead>
     <tbody>
         <?= $data['rows'] ?>
