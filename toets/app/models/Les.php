@@ -31,15 +31,11 @@ class Les
 
     public function getInstructor()
     {
-        $this->db->query("SELECT instructeur1.Id
-                                ,auto.Id
-                                ,instructeur1.Email
-                                ,auto.Kenteken
-                                ,auto.Type
-                          FROM instructeur1
-                          INNER JOIN auto
-                          ON instructeur1.Id = auto.InstructeurId
-                          WHERE Instructeur1.Id = :Id");
+        $this->db->query("SELECT instructeur1.Naam ,instructeur1.Id AS INID, auto.Id AS AUID, instructeur1.Email, auto.Kenteken, auto.Type
+        FROM instructeur1
+        INNER JOIN auto ON instructeur1.Id = auto.InstructeurId
+        WHERE instructeur1.Id = 2
+        ");
 
         $this->db->bind(':Id', 2);
 
