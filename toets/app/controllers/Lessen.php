@@ -78,10 +78,23 @@ class Lessen extends Controller
 
     function addTopic($lesId = NULL)
     {
+        $result = $this->lesModel->getInstructor();
+        if ($result) {
+            $instructeurNaam = $result[0]->Naam;
+            $instructeurEmail = $result[0]->Email;
+            $instructeurAutoKenteken = $result[0]->Kenteken;
+            $instructeurAutoType = $result[0]->Type;
+            $instructeurId = $result[0]->INID;
+        } else {
+            $instructeurNaam = '';
+            $instructeurAuto = '';
+        }
+
         $data = [
-            'title' => 'Onderwerp Toevoegen',
+            'title' => 'Mankement Toevoegen',
             'lesId' => $lesId,
-            'topic' => '',
+            'kenteken' => $instructeurAutoKenteken,
+            
             'topicError' => ''
         ];
 

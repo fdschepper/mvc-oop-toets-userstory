@@ -20,4 +20,4 @@
         <?= $data['rows'] ?>
     </tbody>
 </table>
-<?= $data['button'] ?>
+<a href="<?= URLROOT . '/Lessen/addTopic/' . $data['instructeurId']; ?>">Mankament Toevoegen</a>
