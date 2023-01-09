@@ -77,14 +77,17 @@ class Les
 
     public function addTopic($post)
     {
-        $sql = "INSERT INTO Onderwerp (LesId
-                                      ,Onderwerp)
-                VALUES                (:lesId
-                                      ,:topic)";
+        $today = date("Y-m-d");
+        $sql = "INSERT INTO mankement (datum
+                                      ,mankement)
+                VALUES                ('$today'
+                                      ,'a')";
+
+        echo $sql;
 
         $this->db->query($sql);
-        $this->db->bind(':lesId', $post['lesId'], PDO::PARAM_INT);
-        $this->db->bind(':topic', $post['topic'], PDO::PARAM_STR);
+        //$this->db->bind(':topic', $post['topic'], PDO::PARAM_STR);
+        echo $sql;
         return $this->db->execute();
     }
 

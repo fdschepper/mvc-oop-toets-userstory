@@ -21,7 +21,7 @@ class Lessen extends Controller
             $instructeurNaam = '';
             $instructeurAuto = '';
         }
-        var_dump($result);
+        //var_dump($result);
         $rows = '';
         foreach ($result as $info) {
             //$d = new DateTimeImmutable($info->DatumTijd, new DateTimeZone('Europe/Amsterdam'));
